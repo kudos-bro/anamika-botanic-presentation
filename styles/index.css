@@ -1,0 +1,169 @@
+/* ============================================================
+   গ্রুপ ফ্রিসিয়া — Freesia biotech deck · global design system
+   Cream + sage-green botanical / editorial look
+   ============================================================ */
+
+/* ---- Bengali typeface (local, offline-safe) ------------------ */
+@font-face{font-family:'Hind Siliguri';font-weight:400;font-style:normal;font-display:swap;
+  src:url('/fonts/HindSiliguri-Regular.ttf') format('truetype');}
+@font-face{font-family:'Hind Siliguri';font-weight:500;font-style:normal;font-display:swap;
+  src:url('/fonts/HindSiliguri-Medium.ttf') format('truetype');}
+@font-face{font-family:'Hind Siliguri';font-weight:600;font-style:normal;font-display:swap;
+  src:url('/fonts/HindSiliguri-SemiBold.ttf') format('truetype');}
+@font-face{font-family:'Hind Siliguri';font-weight:700;font-style:normal;font-display:swap;
+  src:url('/fonts/HindSiliguri-Bold.ttf') format('truetype');}
+
+:root{
+  --cream:#F5F4EC;
+  --cream-2:#EEEDE1;
+  --paper:#FBFAF4;
+  --ink:#26301C;
+  --ink-soft:#55624A;
+  --green:#7C9B57;
+  --green-deep:#3C4B2C;
+  --green-mid:#5E7D3C;
+  --gold:#B08E4F;
+  --line:#E2E0D0;
+  --line-soft:#EBE9DC;
+  --shadow:rgba(52,64,40,.16);
+
+  /* Latin = system (SF Pro on mac) first, Bengali falls through to Hind Siliguri */
+  --font-body:-apple-system,BlinkMacSystemFont,'Segoe UI','Hind Siliguri','Inter',sans-serif;
+  --font-bn:'Hind Siliguri',-apple-system,sans-serif;
+}
+
+/* ---- base ---------------------------------------------------- */
+.slidev-layout{
+  font-family:var(--font-body);
+  color:var(--ink);
+  background:
+    radial-gradient(120% 90% at 88% -10%, #FBFBF4 0%, rgba(251,251,244,0) 55%),
+    radial-gradient(120% 100% at -8% 108%, #EEF1E4 0%, rgba(238,241,228,0) 50%),
+    var(--cream);
+  padding:0;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.5;
+}
+.slidev-layout h1,.slidev-layout h2,.slidev-layout h3{color:var(--ink);font-weight:700;letter-spacing:-.01em;}
+.slidev-layout strong{color:var(--green-deep);font-weight:700;}
+
+/* Bengali text tends to sit tighter; give it room where it appears */
+.bn{font-family:var(--font-bn);}
+
+/* ---- reusable pieces ---------------------------------------- */
+
+/* the padded content frame every slide uses */
+.frame{position:absolute;inset:0;padding:46px 64px 58px;display:flex;flex-direction:column;}
+
+/* eyebrow / kicker */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);
+}
+.eyebrow::before{content:"";width:22px;height:2px;border-radius:2px;background:var(--gold);opacity:.8;}
+
+/* headline */
+.headline{
+  font-family:var(--font-bn);
+  font-weight:700;color:var(--green-deep);
+  font-size:40px;line-height:1.12;margin:10px 0 0;letter-spacing:0;
+}
+.headline.sm{font-size:32px;}
+.sub{color:var(--ink-soft);font-size:16px;margin-top:8px;max-width:44ch;}
+
+/* short rule under a headline */
+.rule{width:56px;height:4px;border-radius:3px;background:var(--green);margin-top:16px;}
+
+/* pill / chip */
+.chip{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:5px 13px;border-radius:999px;
+  background:rgba(124,155,87,.13);color:var(--green-mid);
+  font-size:13px;font-weight:600;font-family:var(--font-bn);
+  border:1px solid rgba(124,155,87,.22);
+}
+
+/* numbered dot */
+.numdot{
+  flex:0 0 auto;width:40px;height:40px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--paper);border:1.6px solid var(--green);
+  color:var(--green-mid);font-weight:700;font-size:16px;
+  font-variant-numeric:tabular-nums;
+  box-shadow:0 3px 8px rgba(60,75,44,.10);
+}
+
+/* item row */
+.row{display:flex;gap:15px;align-items:flex-start;}
+.row .rt{font-family:var(--font-bn);}
+.row .rh{font-weight:700;color:var(--ink);font-size:18.5px;line-height:1.2;}
+.row .rd{color:var(--ink-soft);font-size:14.5px;line-height:1.36;margin-top:3px;}
+
+/* soft card */
+.card{
+  background:var(--paper);border:1px solid var(--line);border-radius:16px;
+  box-shadow:0 6px 20px rgba(60,75,44,.07);
+}
+
+/* photo frame */
+.photo{
+  border-radius:18px;overflow:hidden;background:#dfe6d5;
+  border:5px solid #fff;box-shadow:0 16px 34px var(--shadow);
+}
+.photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.photo.tag{position:relative;}
+.photo .cap{
+  position:absolute;left:0;right:0;bottom:0;
+  padding:20px 16px 11px;font-family:var(--font-bn);
+  font-size:13px;font-weight:600;color:#fff;
+  background:linear-gradient(transparent, rgba(30,40,22,.72));
+}
+
+/* section number, big faded */
+.ghostno{
+  position:absolute;font-weight:800;color:rgba(124,155,87,.10);
+  font-size:210px;line-height:1;right:40px;bottom:-24px;user-select:none;
+  font-variant-numeric:tabular-nums;letter-spacing:-.04em;
+}
+
+/* remove theme's default heading underline etc. */
+.slidev-layout :is(h1,h2){border:none;}
+
+/* ---- floral corner decorations (sit behind slide content) ------ */
+.deco{position:absolute;z-index:0;pointer-events:none;}
+/* offsets cancel the .frame padding (46 top / 64 sides / 58 bottom) to reach the slide corner */
+.deco-tr{top:-42px;right:-58px;}
+.deco-bl{bottom:-52px;left:-58px;}
+.deco-br{bottom:-52px;right:-58px;}
+.deco-tl{top:-42px;left:-58px;}
+
+/* ---- entrance animations (CSS — reliable on cold load & export) ---- */
+@keyframes fd-up    {from{opacity:0;transform:translateY(26px)}   to{opacity:1;transform:none}}
+@keyframes fd-left  {from{opacity:0;transform:translateX(-32px)}  to{opacity:1;transform:none}}
+@keyframes fd-right {from{opacity:0;transform:translateX(32px)}   to{opacity:1;transform:none}}
+@keyframes fd-down  {from{opacity:0;transform:translateY(-18px)}  to{opacity:1;transform:none}}
+@keyframes fd-in    {from{opacity:0}                               to{opacity:1}}
+@keyframes fd-pop   {from{opacity:0;transform:translateY(26px) scale(.88)} to{opacity:1;transform:none}}
+@keyframes fd-zoom  {from{opacity:0;transform:scale(1.06)}         to{opacity:1;transform:none}}
+
+[class*="a-"]{ }
+.a-up,.a-left,.a-right,.a-down,.a-in,.a-pop,.a-zoom{
+  opacity:0;animation-duration:.62s;animation-fill-mode:both;
+  animation-timing-function:cubic-bezier(.22,.61,.36,1);
+}
+.a-up{animation-name:fd-up}
+.a-left{animation-name:fd-left}
+.a-right{animation-name:fd-right}
+.a-down{animation-name:fd-down;animation-duration:.5s}
+.a-in{animation-name:fd-in}
+.a-pop{animation-name:fd-pop;animation-timing-function:cubic-bezier(.34,1.4,.5,1)}
+.a-zoom{animation-name:fd-zoom;animation-duration:.85s}
+
+/* respect reduced-motion + print/export: skip animation, show final state */
+@media (prefers-reduced-motion: reduce), print{
+  .a-up,.a-left,.a-right,.a-down,.a-in,.a-pop,.a-zoom{animation:none!important;opacity:1!important;transform:none!important;}
+}
+/* Slidev adds .print-mode / renders export view — force final state there too */
+.print .a-up,.print .a-left,.print .a-right,.print .a-down,.print .a-in,.print .a-pop,.print .a-zoom,
+.slidev-nav-goto-hidden .a-up{animation:none!important;opacity:1!important;transform:none!important;}

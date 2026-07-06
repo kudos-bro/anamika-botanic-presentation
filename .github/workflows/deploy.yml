@@ -22,12 +22,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # reads the pnpm version from package.json "packageManager"
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: pnpm
-      - run: pnpm install
+      - run: pnpm install --no-frozen-lockfile
       # base is auto-derived from the repo name → https://<user>.github.io/<repo>/
       - run: pnpm build --base "/${{ github.event.repository.name }}/"
       - uses: actions/configure-pages@v5

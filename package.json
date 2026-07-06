@@ -2,6 +2,7 @@
   "name": "freesia-biotech-slides",
   "type": "module",
   "private": true,
+  "packageManager": "pnpm@10.34.1",
   "scripts": {
     "dev": "slidev --open",
     "build": "slidev build",

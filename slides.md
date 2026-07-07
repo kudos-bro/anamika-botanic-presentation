@@ -6,6 +6,7 @@ colorSchema: light
 canvasWidth: 980
 aspectRatio: 16/9
 transition: fade
+routerMode: hash
 fonts:
   provider: none
 drawings:

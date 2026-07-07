@@ -7,7 +7,7 @@ const branches = ['Medical', 'Agricultural', 'Environmental', 'Industrial']
   <div class="frame intro">
     <Vine class="deco deco-tr" :size="185" :opacity="0.24" />
     <div class="intro-photo photo tag a-left" style="animation-delay:120ms">
-      <img :src="'/img/gus-transgenic-cultures.jpg'" alt="Transgenic cultures" />
+      <img :src="$img('/img/gus-transgenic-cultures.jpg')" alt="Transgenic cultures" />
       <div class="cap bn">GUS ট্রান্সজেনিক কালচার</div>
     </div>
     <div class="intro-right">

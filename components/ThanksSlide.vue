@@ -1,7 +1,7 @@
 <!-- Slide 14 · Conclusion / Thanks -->
 <template>
   <div class="thanks">
-    <div class="th-bg"><img :src="'/img/group-lawn-tree.jpg'" alt="" /></div>
+    <div class="th-bg"><img :src="$img('/img/group-lawn-tree.jpg')" alt="" /></div>
     <Vine class="th-s1" :size="280" :opacity="0.32" flip />
     <Vine class="th-s2" :size="240" :opacity="0.32" />
 

@@ -30,10 +30,10 @@ const takeaways = [
     </div>
     <div class="exp-photos">
       <div class="photo tag a-zoom" style="animation-delay:200ms">
-        <img :src="'/img/group-dept-building.jpg'" alt="Team at the department building" style="object-position:center 42%" />
+        <img :src="$img('/img/group-dept-building.jpg')" alt="Team at the department building" style="object-position:center 42%" />
       </div>
       <div class="photo tag a-zoom" style="animation-delay:360ms">
-        <img :src="'/img/group-lawn-tree.jpg'" alt="Group on lawn" />
+        <img :src="$img('/img/group-lawn-tree.jpg')" alt="Group on lawn" />
       </div>
     </div>
   </div>

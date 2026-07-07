@@ -27,7 +27,7 @@ defineProps({
       <div class="pcol">
         <div v-for="(p, i) in photos" :key="i" class="photo tag a-left"
           :style="{ animationDelay: (180 + i * 130) + 'ms' }">
-          <img :src="p.src" :alt="p.cap" :style="{ objectPosition: p.pos || 'center' }" />
+          <img :src="$img(p.src)" :alt="p.cap" :style="{ objectPosition: p.pos || 'center' }" />
           <div v-if="p.cap" class="cap bn">{{ p.cap }}</div>
         </div>
       </div>

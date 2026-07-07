@@ -21,7 +21,7 @@ const rooms = [
       <div v-for="(r, i) in rooms" :key="r.en" class="roomcard card a-up"
         :style="{ animationDelay: (180 + i * 120) + 'ms' }">
         <div class="rc-photo">
-          <img :src="`/img/${r.img}.jpg`" :alt="r.en" :style="{ objectPosition: r.pos }" />
+          <img :src="$img(`/img/${r.img}.jpg`)" :alt="r.en" :style="{ objectPosition: r.pos }" />
           <span class="rc-no">{{ r.no }}</span>
         </div>
         <div class="rc-body">

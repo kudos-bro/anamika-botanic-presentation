@@ -14,7 +14,7 @@ const teachers = [
   <div class="grid">
     <div v-for="(t, i) in teachers" :key="t[0]" class="tc card a-up"
       :style="{ animationDelay: (160 + i * 85) + 'ms' }">
-      <div class="ring"><img :src="`/img/teacher-${t[0]}.jpg`" :alt="t[1]" /></div>
+      <div class="ring"><img :src="$img(`/img/teacher-${t[0]}.jpg`)" :alt="t[1]" /></div>
       <div class="meta">
         <div class="nm bn">{{ t[1] }}</div>
         <div class="ro bn">{{ t[2] }}</div>

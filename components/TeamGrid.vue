@@ -19,7 +19,7 @@ const people = [
     <div v-for="(p, i) in people" :key="p[0]" class="tcard a-pop"
       :style="{ animationDelay: (120 + i * 70) + 'ms' }">
       <div class="ring">
-        <img :src="`/team/team-${p[0]}.jpg`" :alt="p[1]" />
+        <img :src="$img(`/team/team-${p[0]}.jpg`)" :alt="p[1]" />
       </div>
       <div class="tname bn">{{ p[1] }}</div>
       <div class="trole bn">{{ p[2] }}</div>

@@ -18,7 +18,7 @@
     </div>
 
     <div class="cov-photo a-zoom" style="animation-delay:150ms">
-      <img :src="'/img/cover-group.jpg'" alt="Group photo" />
+      <img :src="$img('/img/cover-group.jpg')" alt="Group photo" />
       <div class="cov-photo-cap bn">CARS জৈবপ্রযুক্তি কেন্দ্র, ঢাকা বিশ্ববিদ্যালয়</div>
     </div>
   </div>

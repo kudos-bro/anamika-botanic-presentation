@@ -13,11 +13,11 @@ const items = [
     <Vine class="deco deco-tr" :size="185" :opacity="0.24" />
     <div class="res-photos">
       <div class="photo tag a-left" style="animation-delay:120ms">
-        <img :src="'/img/rooting-testtubes.jpg'" alt="In-vitro rooting" />
+        <img :src="$img('/img/rooting-testtubes.jpg')" alt="In-vitro rooting" />
         <div class="cap bn">ইন-ভিট্রো রুটিং</div>
       </div>
       <div class="photo tag a-left" style="animation-delay:240ms">
-        <img :src="'/img/grass-cultures.jpg'" alt="Tissue culture" />
+        <img :src="$img('/img/grass-cultures.jpg')" alt="Tissue culture" />
         <div class="cap bn">টিস্যু কালচার</div>
       </div>
     </div>

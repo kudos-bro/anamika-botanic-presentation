@@ -6,7 +6,6 @@ colorSchema: light
 canvasWidth: 980
 aspectRatio: 16/9
 transition: fade
-routerMode: hash
 fonts:
   provider: none
 drawings:
@@ -68,6 +67,7 @@ layout: default
   eyebrow="PREPARATION ROOM · যন্ত্রপাতি ও মিডিয়া প্রস্তুতি"
   no="01"
   title="প্রিপারেশন রুম"
+  :decos="[{ t: 'vine', c: 'deco-tr', s: 212, o: 0.22 }]"
   :photos="[
     { src: '/img/culture-bottles-bench.jpg', cap: 'কালচার প্রস্তুতি বেঞ্চ' },
     { src: '/img/eq-ultrapure-water.jpg', cap: 'আল্ট্রাপিওর ওয়াটার সিস্টেম' }
@@ -94,6 +94,7 @@ layout: default
   eyebrow="INOCULATION ROOM · জীবাণুমুক্ত কর্মপরিবেশ"
   no="02"
   title="ইনোকুলেশন রুম"
+  :decos="[{ t: 'bloom', c: 'deco-br', s: 192, o: 0.24, f: true }]"
   :photos="[
     { src: '/img/guide-demonstrating-jar.jpg', cap: 'কালচার জার প্রদর্শন', pos: '52% 8%' },
     { src: '/img/culture-jars-plantlets.jpg', cap: 'কালচার জার ও চারা' }
@@ -120,6 +121,7 @@ layout: default
   eyebrow="GROWTH ROOM · চারা বৃদ্ধি ও নিয়ন্ত্রণ"
   no="03"
   title="গ্রোথ রুম"
+  :decos="[{ t: 'vine', c: 'deco-tr', s: 158, o: 0.2 }, { t: 'bloom', c: 'deco-br', s: 150, o: 0.22 }]"
   :photos="[
     { src: '/img/culture-room-rack.jpg', cap: 'গ্রোথ র‍্যাক' },
     { src: '/img/shoot-multiplication.jpg', cap: 'শুট মাল্টিপ্লিকেশন' }
@@ -146,6 +148,7 @@ layout: default
   eyebrow="MOLECULAR LAB · জিন বিশ্লেষণ ও গবেষণা"
   no="04"
   title="মলিকিউলার ল্যাব"
+  :decos="[{ t: 'bloom', c: 'deco-tr', s: 200, o: 0.22, f: true }]"
   :photos="[
     { src: '/img/eq-pcr-thermalcycler.jpg', cap: 'PCR থার্মাল সাইক্লার' },
     { src: '/img/eq-gel-electrophoresis.jpg', cap: 'জেল ইলেকট্রোফোরেসিস' }

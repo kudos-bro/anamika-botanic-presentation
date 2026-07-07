@@ -10,7 +10,7 @@ const items = [
 
 <template>
   <div class="frame research">
-    <Vine class="deco deco-tr" :size="185" :opacity="0.24" />
+    <Bloom class="deco deco-br" :size="198" :opacity="0.24" flip />
     <div class="res-photos">
       <div class="photo tag a-left" style="animation-delay:120ms">
         <img :src="$img('/img/rooting-testtubes.jpg')" alt="In-vitro rooting" />

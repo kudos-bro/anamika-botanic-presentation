@@ -10,8 +10,8 @@ const rooms = [
 
 <template>
   <div class="frame lab">
-    <Vine class="deco deco-tr" :size="180" :opacity="0.24" />
-    <Vine class="deco deco-bl" :size="155" :opacity="0.2" flip />
+    <Bloom class="deco deco-tr" :size="192" :opacity="0.22" />
+    <Vine class="deco deco-bl" :size="152" :opacity="0.2" flip />
     <div class="lab-head a-down">
       <div class="eyebrow">INSIDE THE LAB · চারটি রুম</div>
       <h1 class="headline sm bn">গবেষণাগারের সারসংক্ষেপ</h1>

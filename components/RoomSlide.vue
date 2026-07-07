@@ -1,18 +1,23 @@
 <!-- Lab-room deep-dive: header + 2 stacked photos (left) + 6 numbered items (right).
      Everything animates in on slide enter (CSS keyframes). -->
 <script setup>
+import Vine from './Vine.vue'
+import Bloom from './Bloom.vue'
 defineProps({
   eyebrow: String,
   no: String,
   title: String,
   photos: { type: Array, default: () => [] }, // [{ src, cap }]
   items: { type: Array, default: () => [] },   // [{ n, h, d }]
+  // floral corners: [{ c: 'deco-tr'|'deco-bl'|'deco-br'|'deco-tl', s: size, o: opacity, f: flip }]
+  decos: { type: Array, default: () => [{ c: 'deco-tr', s: 190, o: 0.22 }] },
 })
 </script>
 
 <template>
   <div class="frame room">
-    <Vine class="deco deco-tr" :size="178" :opacity="0.22" />
+    <component :is="d.t === 'bloom' ? Bloom : Vine" v-for="(d, i) in decos" :key="i"
+      :class="['deco', d.c]" :size="d.s" :opacity="d.o || 0.22" :flip="!!d.f" />
     <div class="ghostno a-in" style="animation-delay:250ms">{{ no }}</div>
 
     <!-- header -->

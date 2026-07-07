@@ -5,7 +5,8 @@ const branches = ['Medical', 'Agricultural', 'Environmental', 'Industrial']
 
 <template>
   <div class="frame intro">
-    <Vine class="deco deco-tr" :size="185" :opacity="0.24" />
+    <Vine class="deco deco-tr" :size="166" :opacity="0.2" />
+    <Bloom class="deco deco-br" :size="182" :opacity="0.24" flip />
     <div class="intro-photo photo tag a-left" style="animation-delay:120ms">
       <img :src="$img('/img/gus-transgenic-cultures.jpg')" alt="Transgenic cultures" />
       <div class="cap bn">GUS ট্রান্সজেনিক কালচার</div>

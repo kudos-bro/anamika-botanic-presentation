@@ -10,7 +10,7 @@ const items = [
 
 <template>
   <div class="frame obj">
-    <Vine class="deco deco-tr" :size="185" :opacity="0.24" />
+    <Vine class="deco deco-br" :size="208" :opacity="0.22" flip />
     <div class="obj-photo photo tag a-left" style="animation-delay:120ms">
       <img :src="$img('/img/session-seminar.jpg')" alt="Onboarding session" />
       <div class="cap bn">অনবোর্ডিং সেশন · CARS কেন্দ্র</div>

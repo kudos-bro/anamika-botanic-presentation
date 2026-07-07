@@ -131,12 +131,13 @@
 .slidev-layout :is(h1,h2){border:none;}
 
 /* ---- floral corner decorations (sit behind slide content) ------ */
-.deco{position:absolute;z-index:0;pointer-events:none;}
-/* offsets cancel the .frame padding (46 top / 64 sides / 58 bottom) to reach the slide corner */
-.deco-tr{top:-42px;right:-58px;}
-.deco-bl{bottom:-52px;left:-58px;}
-.deco-br{bottom:-52px;right:-58px;}
-.deco-tl{top:-42px;left:-58px;}
+.deco{position:absolute;z-index:0;pointer-events:none;opacity:.36!important;}
+/* small offsets keep the blossom end ON-screen in the corner (larger negatives pushed
+   the flowers off the slide, leaving only a faint stem) */
+.deco-tr{top:-14px;right:-22px;}
+.deco-bl{bottom:-20px;left:-22px;}
+.deco-br{bottom:-20px;right:-22px;}
+.deco-tl{top:-14px;left:-22px;}
 
 /* ---- entrance animations (CSS — reliable on cold load & export) ---- */
 @keyframes fd-up    {from{opacity:0;transform:translateY(26px)}   to{opacity:1;transform:none}}
